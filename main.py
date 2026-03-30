@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException
 app = FastAPI()
 
-@app.get("/") #defines the static route
+@app.get("/")  # static route
 def root():
     return {'message':'Hello world'}
 
@@ -16,5 +16,6 @@ def get_items(id: int):
     items = ["Keyboard", "Mouse", "Monitor","CPU"]
 
     if id < 0 or id >= len(items):
-        raise HTTPException(status_code=404, detail = "item not found in doc")
+        raise HTTPException(status_code=404, detail = "item not found in doc") 
     return items[id]
+    
