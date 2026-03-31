@@ -25,7 +25,7 @@ def about():
 #         raise HTTPException(status_code=404, detail = "item not found in doc") 
 #     return items[id]
 
-@app.get('view')
+@app.get('/view')
 def view():
     data = load_data()
     return data
